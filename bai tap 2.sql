@@ -85,8 +85,10 @@ where DX.dongxe = 'xe cho khach 36 cho ngoi ';
 
 -- cau 10:
 select * from nhacungcap
-where not exists (select NCC.TenNhaCC, NCC.DiaChi, NCC.MaSoThue from dangkycungcap DKCC join Nhacungcap NCC on DKCC.manhacc = NCC.manhacc and DKCC.dongxe = NCC.dongxecc 
-where NCC.manhacc = DKCC.manhacc );
+where not exists (select * from dangkycungcap
+where nhacungcap.manhacc = dangkycungcap.manhacc );
+
+
 
 
 
